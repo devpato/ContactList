@@ -10,6 +10,7 @@ app.use(express.static(__dirname + '/public'));
 //Setting up router for our contactList
 app.get('/contactList',function(req,res){
     console.log("I received a GET REQUEST");
+    //dummy data
     person1 = {
        name: 'Tim',
        email:'time@gmail.com',
