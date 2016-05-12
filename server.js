@@ -11,6 +11,8 @@ app.use(express.static(__dirname + '/public'));
 app.get('/contactList',function(req,res){
     console.log("I received a GET REQUEST");
     //dummy data for contactList
+    //export PATH=$PATH:/usr/local/mongodb/bin if can't run mongoDB
+    
     person1 = {
        name: 'Tim',
        email:'time@gmail.com',
