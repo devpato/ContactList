@@ -4,4 +4,15 @@ angular.module('contactListApp',[])
         console.log("test of data");
         $scope.contactList = response;
     });
+    
+    $scope.addConctact = function () {
+        console.log($scope.contact);
+        //this sends the input data to the server
+        $http.post('/contactList',$scope.contact).success(function(response){
+            console.log(response);
+        });       
+        
+    };
+    
 }]);
+
