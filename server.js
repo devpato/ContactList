@@ -30,6 +30,14 @@ app.post('/contactList',function(req,res){
        res.json(doc); 
     });
 });
+app.delete('/contactList/:id',function(req,res){
+  var id = req.params.id;
+  console.log(id);
+  db.contactlist.remove({'_id': mongojs.ObjectID(id)},function(err,doc){
+      res.json(doc);
+
+  });
+});
 //Setting up router for our contactList
 /*app.get('/contactlist',function(req,res){
     console.log("I received a GET REQUEST");

@@ -19,6 +19,13 @@ angular.module('contactListApp',[])
         });       
         
     };
+    $scope.remove = function (id) {
+        console.log(id);
+        //this sends the input data to the server
+        $http.delete('/contactList/' + id).success(function(response){
+            refresh();
+        });        
+    };
     
 }]);
 
